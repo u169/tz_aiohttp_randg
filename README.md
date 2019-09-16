@@ -46,7 +46,6 @@ python3 server.py
 | CN_MOVIE_ID | movie_id | Имя поля с id фильма (в таблицах TN_MOVIE и TN_PROFILE_MOVIE) |
 | CN_PROFILE_ID | profile_id | Имя поля с id пользователя в TN_PROFILE_MOVIE |
 | CN_TITLE | title | Имя поля с названием фильма в TN_MOVIE |
-| CN_GENRES | genres | Имя поля с названием фильма в TN_MOVIE |
 
 *CN - column name  
 *TN - table name  
@@ -66,19 +65,16 @@ python3 server.py
     {
         "movie_id": 3,
         "title": "Grumpier Old Men (1995)",
-        "genres": "Comedy|Romance",
         "views": 5019
     },
     {
         "movie_id": 21,
         "title": "Copycat (1995)",
-        "genres": "Crime|Drama|Horror|Mystery|Thriller",
         "views": 5001
     },
     {
         "movie_id": 14,
         "title": "Cutthroat Island (1995)",
-        "genres": "Action|Adventure|Romance",
         "views": 4989
     }
 ]

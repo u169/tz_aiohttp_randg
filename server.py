@@ -19,7 +19,7 @@ TABLE_NAME__PROFILE_MOVIE = 'tn_profile_movie'
 COLUMN_NAME__MOVIE_ID = 'cn_movie_id'
 COLUMN_NAME__PROFILE_ID = 'cn_profile_id'
 COLUMN_NAME__TITLE = 'cn_title'
-COLUMN_NAME__GENRES = 'cn_genres'
+# COLUMN_NAME__GENRES = 'cn_genres'
 
 QUERY_PARAMS = (
     TABLE_NAME__MOVIE,
@@ -27,7 +27,7 @@ QUERY_PARAMS = (
     COLUMN_NAME__MOVIE_ID,
     COLUMN_NAME__PROFILE_ID,
     COLUMN_NAME__TITLE,
-    COLUMN_NAME__GENRES
+    # COLUMN_NAME__GENRES
 )
 
 for param in QUERY_PARAMS:
@@ -46,7 +46,7 @@ async def movies_rec(request):
 
 
 def get_query(profile_id, min_intersect=MIN_INTERSECT):
-    result = """SELECT {cn_movie_id}, {cn_title}, {cn_genres}, _.views FROM {tn_movie}
+    result = """SELECT {cn_movie_id}, {cn_title}, _.views FROM {tn_movie}
                 RIGHT JOIN(
                     SELECT UNNEST(p_movies.movies) AS {cn_movie_id}, COUNT(1) AS views FROM (
                         SELECT {cn_profile_id}, ARRAY_AGG({cn_movie_id}) AS movies
