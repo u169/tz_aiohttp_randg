@@ -1,6 +1,7 @@
 # TZ
 
 ### Требования
+- Python 3.7
 - Всё настроено для запуска в докер контейнерах (`docker`, `docker-compose`)  
 - В PostgreSQL необходимо подключить модуль `intarray`:
 ```postgresql
